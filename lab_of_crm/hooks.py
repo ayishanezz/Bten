@@ -5,6 +5,15 @@ app_description = "Lab of Crm"
 app_email = "info@labofweb.com"
 app_license = "mit"
 
+fixtures = [
+    {
+        "doctype": "Server Script",
+        "filters": [
+            ["module", "=", "lab_of_crm"]
+        ]
+    }
+]
+
 # Apps
 # ------------------
 

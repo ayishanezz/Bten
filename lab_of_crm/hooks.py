@@ -11,7 +11,24 @@ fixtures = [
         "filters": [
             ["module", "=", "lab_of_crm"]
         ]
-    }
+    },
+    {
+        "doctype": "Custom Field",
+        "filters": [
+            ["name", "in", [
+                "Item-custom_company"
+            ]]
+        ]
+    },
+    {
+        "doctype": "Document Naming Rule",
+        "filters": [
+            ["name", "in", [
+                "pkga8cngde",
+                "99m7s6u0ei"
+            ]]
+        ]
+    },
 ]
 
 # Apps

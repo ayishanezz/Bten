@@ -16,7 +16,8 @@ fixtures = [
         "doctype": "Custom Field",
         "filters": [
             ["name", "in", [
-                "Item-custom_company"
+                "Item-custom_company",
+                "Customer-custom_company"
             ]]
         ]
     },
@@ -25,7 +26,9 @@ fixtures = [
         "filters": [
             ["name", "in", [
                 "pkga8cngde",
-                "99m7s6u0ei"
+                "99m7s6u0ei",
+                "av5t56j896",
+                "ip7mfj1k61"
             ]]
         ]
     },

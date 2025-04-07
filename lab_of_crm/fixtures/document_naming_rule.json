@@ -10,12 +10,12 @@
     "value": "Lab of Web"
    }
   ],
-  "counter": 1,
+  "counter": 2,
   "disabled": 0,
   "docstatus": 0,
   "doctype": "Document Naming Rule",
   "document_type": "Item",
-  "modified": "2025-04-05 00:28:11.870701",
+  "modified": "2025-04-05 16:59:14.803007",
   "name": "99m7s6u0ei",
   "prefix": "LBW-",
   "prefix_digits": 5,
@@ -32,14 +32,58 @@
     "value": "Company B"
    }
   ],
-  "counter": 1,
+  "counter": 2,
   "disabled": 0,
   "docstatus": 0,
   "doctype": "Document Naming Rule",
   "document_type": "Item",
-  "modified": "2025-04-05 00:28:43.554960",
+  "modified": "2025-04-05 16:58:38.217067",
   "name": "pkga8cngde",
   "prefix": "CMB-",
+  "prefix_digits": 5,
+  "priority": 0
+ },
+ {
+  "conditions": [
+   {
+    "condition": "=",
+    "field": "custom_company",
+    "parent": "ip7mfj1k61",
+    "parentfield": "conditions",
+    "parenttype": "Document Naming Rule",
+    "value": "Lab of Web"
+   }
+  ],
+  "counter": 1,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Document Naming Rule",
+  "document_type": "Customer",
+  "modified": "2025-04-05 10:39:49.187698",
+  "name": "ip7mfj1k61",
+  "prefix": "LOW-",
+  "prefix_digits": 5,
+  "priority": 0
+ },
+ {
+  "conditions": [
+   {
+    "condition": "=",
+    "field": "custom_company",
+    "parent": "av5t56j896",
+    "parentfield": "conditions",
+    "parenttype": "Document Naming Rule",
+    "value": "Company B"
+   }
+  ],
+  "counter": 1,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Document Naming Rule",
+  "document_type": "Customer",
+  "modified": "2025-04-05 10:40:05.128242",
+  "name": "av5t56j896",
+  "prefix": "CB-",
   "prefix_digits": 5,
   "priority": 0
  }

@@ -17,7 +17,8 @@ fixtures = [
         "filters": [
             ["name", "in", [
                 "Item-custom_company",
-                "Customer-custom_company"
+                "Customer-custom_company",
+                "Company-custom_current_plan"
             ]]
         ]
     },

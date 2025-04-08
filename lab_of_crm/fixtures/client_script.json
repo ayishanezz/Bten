@@ -1,0 +1,24 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Lead",
+  "enabled": 1,
+  "modified": "2025-04-08 17:20:07.147144",
+  "module": "Lab Of Crm",
+  "name": "Default filter for lead list view",
+  "script": "frappe.listview_settings['Lead']={\n    onload: function(listview) {\n        listview.filter_area.add([[\"Lead\" , \"custom_is_converted\", \"=\", 0 ]]);\n        listview.refresh();\n    }\n};",
+  "view": "List"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Lead",
+  "enabled": 1,
+  "modified": "2025-04-08 17:46:22.980002",
+  "module": "Lab Of Crm",
+  "name": "Lead to deal button",
+  "script": "frappe.ui.form.on('Lead', {\n    refresh: function(frm) {\n        if (!frm.doc.custom_is_converted) {\n            frm.add_custom_button('Convert to Deal', function() {\n                frappe.confirm(\n                    'Are you sure you want to convert this Lead to a Deal?',\n                    function() {\n                        // Yes: check the box and save\n                        frm.set_value('custom_is_converted', 1).then(() => {\n                            frm.save();\n                        });\n                    },\n                    function() {\n                        // No: do nothing\n                    }\n                );\n            });\n        }\n    }\n});\n",
+  "view": "Form"
+ }
+]

@@ -1,0 +1,18 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Plan",
+  "modified": "2025-04-08 09:15:51.741616",
+  "name": "Premium",
+  "plan_name": "Premium",
+  "price": 699
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Plan",
+  "modified": "2025-04-08 09:15:24.289435",
+  "name": "Starter",
+  "plan_name": "Starter",
+  "price": 0
+ }
+]

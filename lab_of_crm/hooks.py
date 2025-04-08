@@ -16,12 +16,22 @@ fixtures = [
         ]
     },
     {
+        "doctype": "Client Script",
+        "filters": [
+            ["name", "in", [
+                "Lead to deal button",
+                "Default filter for lead list view",
+            ]]
+        ]
+    },
+    {
         "doctype": "Custom Field",
         "filters": [
             ["name", "in", [
                 "Item-custom_company",
                 "Customer-custom_company",
-                "Company-custom_current_plan"
+                "Company-custom_current_plan",
+                "Lead-custom_is_converted"
             ]]
         ]
     },

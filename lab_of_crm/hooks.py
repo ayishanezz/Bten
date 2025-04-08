@@ -33,6 +33,15 @@ fixtures = [
             ]]
         ]
     },
+    {
+        "doctype": "Plan",
+        "filters": [
+            ["name", "in", [
+                "Premium",
+                "Starter"
+            ]]
+        ]
+    }
 ]
 
 # Apps

@@ -9,7 +9,10 @@ fixtures = [
     {
         "doctype": "Server Script",
         "filters": [
-            ["module", "=", "lab_of_crm"]
+            ["name", "in", [
+                "Lead Validation",
+                "User limitation",
+            ]]
         ]
     },
     {

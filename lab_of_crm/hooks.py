@@ -31,7 +31,10 @@ fixtures = [
                 "Item-custom_company",
                 "Customer-custom_company",
                 "Company-custom_current_plan",
-                "Lead-custom_is_converted"
+                "Lead-custom_is_converted",
+                "Lead-custom_lead_stage",
+                "Lead-custom_referenced_by",
+                "Lead-custom_social_media"
             ]]
         ]
     },
@@ -46,15 +49,6 @@ fixtures = [
             ]]
         ]
     },
-    {
-        "doctype": "Plan",
-        "filters": [
-            ["name", "in", [
-                "Premium",
-                "Starter"
-            ]]
-        ]
-    }
 ]
 
 # Apps

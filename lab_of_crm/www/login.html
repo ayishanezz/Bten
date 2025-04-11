@@ -1,0 +1,79 @@
+{% extends "templates/web.html" %}
+
+{% set title = "" %}
+{% set show_title = false %}
+
+{# Hide all default sections we don't want #}
+{% block title %}{% endblock %}
+{% block breadcrumbs %}{% endblock %}
+{% block page_header %}{% endblock %}
+{% block header %}{% endblock %}
+{% block main_section %}{% endblock %}
+{% block footer %}{% endblock %}
+{% block sidebar %}{% endblock %}
+{% block navbar %}{% endblock %}
+
+{# Include custom CSS if needed #}
+{% block head_include %}
+  {{ include_style('login.bundle.css') }}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+{% endblock %}
+
+
+{# Your custom login layout #}
+{% block page_content %}
+<div class="login-wrapper">
+	<div class="login-image-section">
+		<img src="" class="login-illustration">
+	</div>
+	<div class="login-form-section">
+		
+
+
+		<form method="POST" action="/api/method/lab_of_crm.www.login.custom_login">
+
+
+
+		  <h2 class="form-heading" style="color: #37e654;">Login to LAB OF CRM</h2>
+	  
+		  <label for="login_email">{{ _('Email') }}</label>
+		  <input type="text" id="login_email" class="form-control custom-input" name="usr"
+			placeholder="jane@example.com" required autofocus autocomplete="username">
+	  
+		  <label for="login_password">{{ _('Password') }}</label>
+		  <input type="password" id="login_password" class="form-control custom-input" name="pwd"
+			placeholder="Enter your password" required autocomplete="current-password">
+	  
+		  <button class="btn btn-login custom-login-btn" type="submit">
+			{{ _("Login Now") }}
+		  </button>
+
+		  {% if message %}
+  			<div class="alert alert-danger text-center">{{ message }}</div>
+		{% endif %}
+	  
+		  <div class="login-divider-line">
+			<span>{{ _("or with") }}</span>
+		  </div>
+	  
+		  <div class="social-login-buttons custom-social-buttons">
+			<a href="#" class="btn btn-login-option btn-google-custom">
+			  <i class="fab fa-google" style="margin-right: 8px;"></i> Google
+			</a>
+			<a href="#" class="btn btn-login-option btn-facebook-custom">
+			  <i class="fab fa-facebook-f" style="margin-right: 8px;"></i> Facebook
+			</a>
+		  </div>
+		  
+		</form>
+	  </div>
+	  
+	  
+	
+</div>
+{% endblock %}
+
+{# Optional JS include #}
+{% block script %}
+<script>{% include "templates/includes/login/login.js" %}</script>
+{% endblock %}

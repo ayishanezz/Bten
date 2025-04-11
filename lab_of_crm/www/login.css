@@ -1,0 +1,218 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f0f2f5;
+  overflow: hidden;
+}
+
+/* Reset all Frappe wrappers */
+#page-web,
+#page-container,
+.page-content,
+body > .container,
+body > .content,
+.layout-main-section,
+.container.page-body,
+main.container,
+div.container {
+  padding: 0 !important;
+  margin: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Wrapper layout */
+.login-wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Left side image */
+.login-image-section {
+  flex: 7;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.login-illustration {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Right side login form */
+.login-form-section {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 3rem 2rem;
+}
+
+/* Form layout */
+form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Headline */
+.form-heading {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+/* Input fields */
+.custom-input {
+  padding: 1.25rem 1rem;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  background-color: white;
+  
+}
+
+.custom-input:focus {
+  border-color: #37e654;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 77, 148, 0.2);
+  background-color: white;
+}
+
+/* Login button */
+.custom-login-btn {
+  background-color: #37e654;
+  color: white;
+  border: none;
+  padding: 1.25rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 6px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-login-btn:hover {
+  background-color: #e04385;
+}
+
+/* Error/message display */
+.login-messages {
+  color: #ff4d4d;
+  background-color: #ffe6e6;
+  border: 1px solid #ffcccc;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 500;
+  width: 100%;
+}
+
+/* Divider */
+.login-divider-line {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.login-divider-line::before,
+.login-divider-line::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+}
+
+.login-divider-line span {
+  padding: 0 0.75rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Social buttons */
+.custom-social-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-facebook-custom {
+  flex: 1;
+  background-color: #ffffff;
+  color: #1877F2;
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-google-custom {
+  flex: 1;
+  background-color: #ffffff;
+  color: #DB4437;
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-google-custom:hover,
+.btn-facebook-custom:hover {
+  background-color: #f2f2f2;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .login-wrapper {
+    flex-direction: column;
+  }
+
+  .login-image-section {
+    flex: none;
+    height: 40vh;
+  }
+
+  .login-form-section {
+    flex: none;
+    height: 60vh;
+    padding: 2rem 1.5rem;
+  }
+
+  .btn-google-custom i {
+  color: #DB4437; /* Google's red */
+  margin-right: 8px;
+}
+
+.btn-facebook-custom i {
+  color: #1877F2; /* Facebook blue */
+  margin-right: 8px;
+}
+
+
+}

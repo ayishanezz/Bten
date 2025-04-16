@@ -51,6 +51,10 @@ fixtures = [
     },
 ]
 
+web_form_routes = [
+    {"from_route": "/login", "to_route": "lab_of_crm.www.login.custom_login"}
+]
+
 # Apps
 # ------------------
 

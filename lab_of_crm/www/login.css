@@ -62,6 +62,7 @@ div.container {
   justify-content: center;
   background-color: #ffffff;
   padding: 3rem 2rem;
+  gap: 1.25rem;
 }
 
 /* Form layout */
@@ -90,7 +91,6 @@ form {
   border-radius: 6px;
   width: 100%;
   background-color: white;
-  
 }
 
 .custom-input:focus {
@@ -115,7 +115,7 @@ form {
 }
 
 .custom-login-btn:hover {
-  background-color: #e04385;
+  background-color: #13ee80;
 }
 
 /* Error/message display */
@@ -205,13 +205,70 @@ form {
   }
 
   .btn-google-custom i {
-  color: #DB4437; /* Google's red */
-  margin-right: 8px;
+    color: #DB4437; /* Google's red */
+    margin-right: 8px;
+  }
+
+  .btn-facebook-custom i {
+    color: #1877F2; /* Facebook blue */
+    margin-right: 8px;
 }
 
-.btn-facebook-custom i {
-  color: #1877F2; /* Facebook blue */
-  margin-right: 8px;
+/* Ensure spacing stays consistent on toggle */
+.login-form-section .auth-form {
+  display: none;
+  flex-direction: column;
+  gap: 1.25rem;
+  animation: fadeIn 0.3s ease;
+}
+
+.login-form-section .auth-form.active {
+  display: flex;
+}
+
+/* Fade-in animation for smoother transition */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add smooth transition for the form toggle */
+#forgot-password-form, #login-form {
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#forgot-password-form {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#forgot-password-form.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+#login-form {
+  opacity: 1;
+  visibility: visible;
+}
+
+#login-form.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.visible {
+  display: flex !important;
 }
 
 

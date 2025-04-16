@@ -11,13 +11,14 @@ from frappe.apps import get_default_path
 from frappe.auth import LoginManager
 from frappe.core.doctype.navbar_settings.navbar_settings import get_app_logo
 from frappe.rate_limiter import rate_limit
-from frappe.utils import cint, get_url
+from frappe.utils import cint, get_url, now
 from frappe.utils.data import escape_html
 from frappe.utils.html_utils import get_icon_html
 from frappe.utils.jinja import guess_is_path
 from frappe.utils.oauth import get_oauth2_authorize_url, get_oauth_keys, redirect_post_login
 from frappe.utils.password import get_decrypted_password
 from frappe.website.utils import get_home_page
+from frappe.utils.password import update_password
 
 no_cache = True
 
@@ -246,5 +247,9 @@ def custom_login():
         frappe.response["type"] = "redirect"
         frappe.response["location"] = "/login?message=Login failed. Please try again."
 
-
+@frappe.whitelist(allow_guest=True)
+def reset_password(user):
+    user_doc = frappe.get_doc("User", user)
+    reset_link = user_doc.reset_password(send_email=True)
+    return {"message": _("Password reset link sent"), "reset_link": reset_link}
 

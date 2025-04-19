@@ -19,9 +19,6 @@
 
 {% block page_content %}
 <div class="login-wrapper">
-	<div class="login-image-section">
-		<img src="" class="login-illustration">
-	</div>
 	<div class="login-form-section">
 
 		<!-- Wrapper for switching forms -->
@@ -29,7 +26,9 @@
 
 			<!-- Login Form -->
 			<form method="POST" action="/api/method/lab_of_crm.www.login.custom_login" id="login-form" class="visible">
-				<h2 class="form-heading" style="color: #37e654;">Login to LAB OF CRM</h2>
+				<div class="form-logo" style="padding: 50px; margin-top: -60px;">
+					<img src="/images/labofcrm_login.png" alt="Logo" class="logo-img" style="width: 170px; height: auto;">
+				  </div>				  
 
 				<label for="login_email">{{ _('Email') }}</label>
 				<input type="text" id="login_email" class="form-control custom-input" name="usr"
@@ -40,8 +39,8 @@
 					placeholder="Enter your password" required autocomplete="current-password">
 
 				<!-- Forgot password link -->
-				<p style="margin-top: 8px;">
-					<a href="#forgot" onclick="showForgotForm()" style="font-size: 14px;">{{ _('Forgot Password?') }}</a>
+				<p>
+					<a href="#forgot" onclick="showForgotForm()" style="font-size: 12px; color: #a56cc8;">{{ _('Forgot Password?') }}</a>
 				</p>
 
 				<button class="btn btn-login custom-login-btn" type="submit">
@@ -58,12 +57,21 @@
 
 				<div class="social-login-buttons custom-social-buttons">
 					<a href="#" class="btn btn-login-option btn-google-custom" onclick="triggerEmailField(event)">
-						<i class="fab fa-google" style="margin-right: 8px;"></i> Google
+						<img src="https://developers.google.com/identity/images/g-logo.png" 
+							 alt="Google" width="18" height="18" style="margin-right: 8px; vertical-align: middle;"> Google
 					</a>
 					<a href="#" class="btn btn-login-option btn-facebook-custom" onclick="triggerEmailField(event)">
-						<i class="fab fa-facebook-f" style="margin-right: 8px;"></i> Facebook
+						<img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" 
+							 alt="Facebook" width="18" height="18" style="margin-right: 8px; vertical-align: middle;"> Facebook
 					</a>
 				</div>
+				
+				
+				
+				<p style="margin-top: 1.5rem; font-size: 14px; text-align: center;">
+					{{ _("Don't have an account yet?") }}
+					<a href="/signup" style="text-decoration: underline; color: #a56cc8;">{{ _("Sign up") }}</a>
+				</p>
 			</form>
 
 			<!-- Forgot Password UI Section -->
@@ -81,7 +89,7 @@
 						{{ _('Send Reset Link') }}
 					</button>
 					<p style="margin-top: 10px;">
-						<a href="#" onclick="hideForgotForm()" style="font-size: 14px;">{{ _('Back to Login') }}</a>
+						<a href="#" onclick="hideForgotForm()" style="font-size: 14px; color: #a56cc8;">{{ _('Back to Login') }}</a>
 					</p>
 				</form>
 			</div>

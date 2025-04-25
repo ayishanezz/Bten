@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestDealStatus(FrappeTestCase):
+class TestTaskReminder(FrappeTestCase):
 	pass

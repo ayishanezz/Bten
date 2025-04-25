@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class DealStatus(Document):
+class TaskReminder(Document):
 	pass

@@ -1,0 +1,67 @@
+/* ==== Full-page Gradient Background ==== */
+body, .page-container {
+    background: linear-gradient(to right, #d222fe, #8222e0, #4c1bc7, #151299, #0d084a) !important;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+/* ==== Sidebar & Item Styles ==== */
+.page-body .layout-side-section {
+    background: transparent !important;
+}
+
+.page-body .layout-side-section .desk-sidebar-item {
+    background: transparent !important;
+}
+
+.page-body .layout-side-section .desk-sidebar-item a {
+    color: #fff !important;
+}
+
+.page-body .layout-side-section .desk-sidebar-item a .icon-md {
+    filter: invert(1) !important; 
+}
+
+.page-body .layout-side-section .desk-sidebar-item:hover {
+    background-color: #fff !important; 
+}
+
+.page-body .layout-side-section .desk-sidebar-item:hover a {
+    color: #d222fe !important; 
+}
+
+.page-body .layout-side-section .desk-sidebar-item:hover .icon-md {
+    filter: invert(27%) sepia(85%) saturate(6372%) hue-rotate(-319deg) brightness(99%) contrast(94%) !important;
+}
+
+/* ==== Nested Sidebar Items ==== */
+.sidebar-child-item.nested-container .sidebar-item-label { 
+    font-weight: 500; 
+    font-size: 14px; 
+}
+
+.sidebar-child-item.nested-container .icon-md { 
+    height: 18px !important; 
+    width: 18px !important; 
+    filter: invert(1) !important; 
+}
+
+.page-body .layout-side-section .sidebar-item-container { 
+    margin-bottom: 5px; 
+}
+
+/* ==== Logo ==== */
+.app-logo {
+    width: 160px !important; 
+}
+
+/* ===== Navbar Styles ===== */
+.sticky-top .navbar {
+    background: linear-gradient(to right, #d222fe, #8222e0, #4c1bc7, #151299, #0d084a) !important;
+}
+
+.sticky-top .navbar .form-control#navbar-search {
+    background-color: #ffffff !important; 
+    color: #000000 !important;
+}

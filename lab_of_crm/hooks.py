@@ -75,7 +75,8 @@ web_form_routes = [
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/lab_of_crm/css/lab_of_crm.css"
+app_include_css = "/assets/lab_of_crm/css/main.css"
+# app_include_css = "/assets/lab_of_crm/css/crm_nav.css"
 # app_include_js = "/assets/lab_of_crm/js/lab_of_crm.js"
 
 # include js, css files in header of web template

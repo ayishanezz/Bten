@@ -1,7 +1,7 @@
 // Copyright (c) 2025, Lab of Web and contributors
 // For license information, please see license.txt
 
-// frappe.ui.form.on("Deal Status", {
+// frappe.ui.form.on("Task Reminder", {
 // 	refresh(frm) {
 
 // 	},

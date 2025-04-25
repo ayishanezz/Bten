@@ -19,7 +19,6 @@ fixtures = [
         "doctype": "Client Script",
         "filters": [
             ["name", "in", [
-                "Lead to deal button",
                 "Default filter for lead list view",
             ]]
         ]

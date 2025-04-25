@@ -1,28 +1,37 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:status",
- "creation": "2025-04-09 15:01:13.874105",
+ "creation": "2025-04-21 13:15:33.380528",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "status"
+  "user",
+  "reminder_time",
+  "description"
  ],
  "fields": [
   {
-   "fieldname": "status",
+   "fieldname": "user",
    "fieldtype": "Data",
-   "label": "Status",
-   "unique": 1
+   "label": "User"
+  },
+  {
+   "fieldname": "reminder_time",
+   "fieldtype": "Datetime",
+   "label": "Reminder Time"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Long Text",
+   "label": "Description"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-09 15:02:23.703364",
+ "modified": "2025-04-21 13:20:32.601170",
  "modified_by": "Administrator",
  "module": "Lab Of Crm",
- "name": "Deal Status",
- "naming_rule": "By fieldname",
+ "name": "Task Reminder",
  "owner": "Administrator",
  "permissions": [
   {

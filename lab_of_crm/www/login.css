@@ -26,7 +26,7 @@ body {
 
 /* Add a hover effect on the form */
 .login-form-section:hover {
-  transform: translateY(-5px);
+  transform: translateY(-40px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -70,22 +70,23 @@ input[type="email"]:focus {
 .custom-login-btn {
   background: linear-gradient(to right, #d222fe, #8222e0, #4c1bc7, #151299);
   color: white;
-  padding: 15px 25px; /* Keeps the button height */
-  font-size: 14px; /* Figma size */
-  line-height: 2.3; /* Helps maintain good vertical rhythm */
+  padding: 15px 25px;
+  font-size: 14px;
+  line-height: 2.3;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   width: 100%;
   margin-top: 10px;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Even on hover, text color stays white */
+.custom-login-btn:hover {
+  color: white;
 }
 
 
-
-button:hover {
-  background-color: #2f9e43; /* Darker green for hover effect */
-}
 
 /* Style for the forgot password link */
 p a {
@@ -187,4 +188,23 @@ p a:hover {
   padding: 10px;
   border-radius: 5px;
   margin-top: 10px;
+}
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.toggle-password {
+  display: inline-block;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #aaa;
+}
+
+.toggle-password:hover {
+  color: #666;
 }

@@ -59,7 +59,20 @@ body, .page-container {
 /* ===== Navbar Styles ===== */
 .sticky-top .navbar {
     background: linear-gradient(to right, #d222fe, #8222e0, #4c1bc7, #151299, #0d084a) !important;
+    
 }
+
+.sticky-top .navbar .btn-reset.nav-link {
+    color: #ffffff !important; /* Change #ffffff to whatever text color you want */
+}
+
+.sticky-top .navbar .es-icon.icon-sm {
+    fill: #ffffff !important;
+    stroke: #ffffff !important;
+}
+
+
+
 
 .sticky-top .navbar .form-control#navbar-search {
     background-color: #ffffff !important; 

@@ -1,0 +1,78 @@
+/* ==== Full Page Background ==== */
+html, body, .page-container, .page-body {
+    background-color: #D5D1E7 !important;
+    background-image: none !important;
+    background-attachment: initial;
+    background-size: initial;
+}
+
+/* ==== Navbar Consistent Background ==== */
+.sticky-top .navbar {
+    background-color: #D5D1E7 !important;
+    background-image: none !important;
+}
+
+/* ==== Sidebar & Item Styles ==== */
+.page-body .layout-side-section {
+    background: transparent !important;
+}
+
+.page-body .layout-side-section .desk-sidebar-item {
+    background: transparent !important;
+}
+
+.page-body .layout-side-section .desk-sidebar-item a {
+    color: #333 !important;
+}
+
+.page-body .layout-side-section .desk-sidebar-item a .icon-md {
+    filter: invert(0) !important;
+}
+
+.page-body .layout-side-section .desk-sidebar-item:hover {
+    background-color: #ffffff !important;
+}
+
+.page-body .layout-side-section .desk-sidebar-item:hover a {
+    color: #4c1bc7 !important;
+}
+
+.page-body .layout-side-section .desk-sidebar-item:hover .icon-md {
+    filter: invert(27%) sepia(85%) saturate(6372%) hue-rotate(-319deg) brightness(99%) contrast(94%) !important;
+}
+
+/* ==== Nested Sidebar Items ==== */
+.sidebar-child-item.nested-container .sidebar-item-label {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.sidebar-child-item.nested-container .icon-md {
+    height: 18px !important;
+    width: 18px !important;
+    filter: invert(0) !important;
+}
+
+.page-body .layout-side-section .sidebar-item-container {
+    margin-bottom: 5px;
+}
+
+/* ==== Logo ==== */
+.app-logo {
+    width: 160px !important;
+}
+
+/* ==== Navbar Search + Icons ==== */
+.sticky-top .navbar .btn-reset.nav-link {
+    color: #333 !important;
+}
+
+.sticky-top .navbar .es-icon.icon-sm {
+    fill: #333 !important;
+    stroke: #333 !important;
+}
+
+.sticky-top .navbar .form-control#navbar-search {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}

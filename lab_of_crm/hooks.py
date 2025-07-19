@@ -51,7 +51,7 @@ fixtures = [
     {
         "doctype": "Print Format",
         "filters": [
-            ["module", "=", "lab_of_crm"],
+            ["module", "=", "Lab Of Crm"],
         ]
     },
 ]

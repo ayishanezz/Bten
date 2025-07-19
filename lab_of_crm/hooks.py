@@ -48,6 +48,12 @@ fixtures = [
             ]]
         ]
     },
+    {
+        "doctype": "Print Format",
+        "filters": [
+            ["module", "=", "lab_of_crm"],
+        ]
+    },
 ]
 
 web_form_routes = [

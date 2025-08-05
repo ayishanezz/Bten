@@ -20,6 +20,8 @@ fixtures = [
         "filters": [
             ["name", "in", [
                 "Default filter for lead list view",
+                "item change manually",
+                "Additional items table"
             ]]
         ]
     },

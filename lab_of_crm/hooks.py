@@ -12,6 +12,7 @@ fixtures = [
             ["name", "in", [
                 "Lead Validation",
                 "User limitation",
+                "quotation discount",
             ]]
         ]
     },
@@ -21,7 +22,7 @@ fixtures = [
             ["name", "in", [
                 "Default filter for lead list view",
                 "item change manually",
-                "Additional items table"
+                "Additional items table",
             ]]
         ]
     },
@@ -61,6 +62,15 @@ fixtures = [
 web_form_routes = [
     {"from_route": "/login", "to_route": "lab_of_crm.www.login.custom_login"}
 ]
+
+override_doctype_class = {
+    "Quotation": "lab_of_crm.api.quotation.CustomQuotation"
+}
+
+patches = [
+    "lab_of_crm.patches.add_company_field_to_print_format"
+]
+
 
 # Apps
 # ------------------

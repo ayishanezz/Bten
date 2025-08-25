@@ -23,7 +23,7 @@ fixtures = [
             ]]
         ]
     },
-{
+    {
         "doctype": "Print Format",
         "filters": [
             ["module", "=", "Lab Of Crm"],

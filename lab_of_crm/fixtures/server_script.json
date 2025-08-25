@@ -17,43 +17,5 @@
   "reference_doctype": "Quotation",
   "script": "max_discount = 10  # Max allowed for Sales user profile\nrestricted_company = \"JBM Kitchen & Interiors\"\n\nuser_role_profile = frappe.db.get_value(\"User\", frappe.session.user, \"role_profile_name\")\ncompany = doc.company\n\nif company == restricted_company and user_role_profile == \"Sales user\":\n    discount = doc.additional_discount_percentage or 0\n    if discount > max_discount:\n        company = doc.company\n\n        admins = frappe.get_all(\n            \"User\",\n            filters={\"role_profile_name\": \"Interior design SA\", \"enabled\": 1},\n            pluck=\"name\"\n        )\n\n        admin_emails = []\n        for admin_user in admins:\n            if frappe.db.exists(\n                \"User Permission\",\n                {\"user\": admin_user, \"allow\": \"Company\", \"for_value\": company}\n            ):\n                email = frappe.db.get_value(\"User\", admin_user, \"email\")\n                if email:\n                    admin_emails.append(email)\n\n                # Create Notification Log (app notification)\n                notif = frappe.get_doc({\n                    \"doctype\": \"Notification Log\",\n                    \"subject\": f\"Discount Approval Needed ({discount}%) for {doc.name}\",\n                    \"email_content\": f\"User {frappe.session.user} tried to give {discount}% discount on Quotation for company {company}.\",\n                    \"for_user\": admin_user,\n                    \"type\": \"Alert\",\n                    \"document_type\": doc.doctype,\n                    \"document_name\": doc.name,\n                    \"read\": 0,\n                    \"date\": frappe.utils.now()\n                })\n                notif.insert(ignore_permissions=True)\n\n        # Send email\n        if admin_emails:\n            frappe.sendmail(\n                recipients=admin_emails,\n                subject=f\"Discount Approval Needed for {doc.name or 'New Quotation'}\",\n                message=f\"\"\"\n                <p>User <b>{frappe.session.user}</b> tried to give {discount}% discount on Quotation for company {company}.</p>\n                <p>Please review and approve if necessary.</p>\n                \"\"\",\n                delayed=False\n            )\n\n        frappe.throw(f\"You cannot give more than {max_discount}% discount. Please request Admin approval.\")\n        \n        \n",
   "script_type": "DocType Event"
- },
- {
-  "allow_guest": 0,
-  "api_method": null,
-  "cron_format": null,
-  "disabled": 0,
-  "docstatus": 0,
-  "doctype": "Server Script",
-  "doctype_event": "Before Insert",
-  "enable_rate_limit": 0,
-  "event_frequency": "All",
-  "modified": "2025-04-03 16:12:20.042826",
-  "module": null,
-  "name": "Lead Validation",
-  "rate_limit_count": 5,
-  "rate_limit_seconds": 86400,
-  "reference_doctype": "Lead",
-  "script": "existing_lead = frappe.get_all(\n        \"Lead\",\n        filters={\"company\": doc.company, \"lead_name\": doc.lead_name},\n        limit=1\n    )\n    \nif existing_lead:\n        frappe.throw(\"A Lead with this Name already exists for this company.\")",
-  "script_type": "DocType Event"
- },
- {
-  "allow_guest": 0,
-  "api_method": null,
-  "cron_format": null,
-  "disabled": 0,
-  "docstatus": 0,
-  "doctype": "Server Script",
-  "doctype_event": "Before Insert",
-  "enable_rate_limit": 0,
-  "event_frequency": "All",
-  "modified": "2025-04-08 15:26:29.830882",
-  "module": "Lab Of Crm",
-  "name": "User limitation",
-  "rate_limit_count": 5,
-  "rate_limit_seconds": 86400,
-  "reference_doctype": "User",
-  "script": "employee = frappe.get_doc(\"Employee\", {\"user_id\": frappe.session.user})\ncompanies = frappe.get_all(\"Company\")\n\nfor company in companies:\n    if company.name == employee.company:\n        plan = frappe.db.get_value(\"Company\", {'name': employee.company}, 'custom_current_plan')\n        if plan == \"Starter\":\n            frappe.throw(\"Can't add another user. Please upgrade your plan\")\n        \n    ",
-  "script_type": "DocType Event"
  }
 ]

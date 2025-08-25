@@ -10,8 +10,6 @@ fixtures = [
         "doctype": "Server Script",
         "filters": [
             ["name", "in", [
-                "Lead Validation",
-                "User limitation",
                 "quotation discount",
             ]]
         ]
@@ -20,38 +18,12 @@ fixtures = [
         "doctype": "Client Script",
         "filters": [
             ["name", "in", [
-                "Default filter for lead list view",
                 "item change manually",
                 "Additional items table",
             ]]
         ]
     },
-    {
-        "doctype": "Custom Field",
-        "filters": [
-            ["name", "in", [
-                "Item-custom_company",
-                "Customer-custom_company",
-                "Company-custom_current_plan",
-                "Lead-custom_is_converted",
-                "Lead-custom_lead_stage",
-                "Lead-custom_referenced_by",
-                "Lead-custom_social_media"
-            ]]
-        ]
-    },
-    {
-        "doctype": "Document Naming Rule",
-        "filters": [
-            ["name", "in", [
-                "pkga8cngde",
-                "99m7s6u0ei",
-                "av5t56j896",
-                "ip7mfj1k61"
-            ]]
-        ]
-    },
-    {
+{
         "doctype": "Print Format",
         "filters": [
             ["module", "=", "Lab Of Crm"],

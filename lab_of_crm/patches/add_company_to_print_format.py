@@ -16,3 +16,5 @@ def execute():
             "reqd": 0
         }).insert(ignore_permissions=True)
         frappe.clear_cache(doctype="Print Format")
+
+

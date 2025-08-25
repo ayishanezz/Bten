@@ -49,3 +49,5 @@ class CustomQuotation(Quotation):
             self.base_rounded_total = round(self.base_grand_total)
 
         # Step 3: Payment terms will automatically use updated grand total
+
+
